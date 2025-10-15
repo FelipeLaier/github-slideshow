@@ -1,13 +1,28 @@
 ---
-layout: presentation
+layout: site
+title: PR Tracker
 ---
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+<section class="hero container">
+  <div>
+    <h1>Miniaturas premium para celebrar seus PRs</h1>
+    <p>Seu PR merece mais do que uma foto. Track it. Own it. Colecionáveis de alta qualidade inspirados no CrossFit e no levantamento de peso.</p>
+    <div class="actions">
+      <a class="cta" href="{{ site.baseurl }}/produtos.html">Comprar agora</a>
+      <a class="cta secondary" href="{{ site.baseurl }}/sobre.html">Conheça a marca</a>
+    </div>
+  </div>
+  <div>
+    <img src="assets/svg/deadlift-set.svg" alt="Miniatura Deadlift Set">
+  </div>
+</section>
+
+<section class="section container">
+  <h2>Produtos em destaque</h2>
+  <div class="grid" id="home-products"></div>
+</section>
+
+<section class="section container">
+  <h2>Comunidade e propósito</h2>
+  <p class="muted">Nasceu da paixão por desempenho e pelo orgulho de conquistar um Personal Record. Criamos troféus simbólicos que cabem na sua mesa — lembretes diários da sua disciplina.</p>
+</section>

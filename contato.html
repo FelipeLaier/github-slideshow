@@ -1,0 +1,45 @@
+---
+layout: site
+title: Contato / Parcerias · PR Tracker
+---
+
+<section class="section container">
+  <h1>Contato / Parcerias</h1>
+  <p class="muted">Fale com a gente para pedidos, parcerias com atletas e boxes de CrossFit.</p>
+  <form class="form" id="contact-form" onsubmit="return false;">
+    <label>
+      <span>Nome</span>
+      <input type="text" name="nome" required placeholder="Seu nome">
+    </label>
+    <label>
+      <span>E-mail</span>
+      <input type="email" name="email" required placeholder="seu@email.com">
+    </label>
+    <label>
+      <span>Tipo de contato</span>
+      <select name="tipo" required>
+        <option value="">Selecione</option>
+        <option>Cliente</option>
+        <option>Atleta</option>
+        <option>Box de CrossFit</option>
+        <option>Outro</option>
+      </select>
+    </label>
+    <label>
+      <span>Mensagem</span>
+      <textarea name="mensagem" rows="5" required placeholder="Conte um pouco do que você precisa"></textarea>
+    </label>
+    <button class="btn" id="send">Enviar</button>
+    <div id="form-status" class="muted" role="status" aria-live="polite"></div>
+  </form>
+</section>
+<script type="module">
+  const form = document.querySelector('#contact-form');
+  const statusEl = document.querySelector('#form-status');
+  document.querySelector('#send').addEventListener('click', () => {
+    if(!form.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(form).entries());
+    statusEl.textContent = 'Mensagem enviada! Obrigado por entrar em contato.';
+    form.reset();
+  });
+</script>

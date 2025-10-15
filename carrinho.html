@@ -1,0 +1,17 @@
+---
+layout: site
+title: Carrinho · PR Tracker
+---
+
+<section class="section container">
+  <h1>Carrinho</h1>
+  <p id="cart-empty" class="muted">Seu carrinho está vazio.</p>
+  <div id="cart-list" class="grid" style="grid-template-columns:1fr;"></div>
+  <div class="config-summary" style="margin-top:16px;max-width:560px;">
+    <div class="line total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div>
+    <div class="actions">
+      <button id="checkout" class="btn">Finalizar compra</button>
+      <a class="btn outline" href="{{ site.baseurl }}/produtos.html">Continuar comprando</a>
+    </div>
+  </div>
+</section>
