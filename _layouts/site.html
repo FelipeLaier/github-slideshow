@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  {% include site-head.html %}
+</head>
+<body>
+  {% include site-header.html %}
+  <main id="conteudo" class="site-main" tabindex="-1">{{ content }}</main>
+  {% include site-footer.html %}
+  <script type="module" src="{{ site.baseurl }}/assets/js/app.js"></script>
+</body>
+</html>
